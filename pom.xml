@@ -6,9 +6,9 @@
 
     <groupId>TagAnnotation</groupId>
     <artifactId>TagAnnotation</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <!-- package as a jar file -->
-    <packaging>jar</packaging>
+<!--    <packaging>jar</packaging>-->
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
