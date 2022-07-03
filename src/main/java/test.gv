@@ -1,0 +1,24 @@
+graph {
+//    { rank=same; "testGetNull testGetNotNull testSetNull"}
+//    { rank=same; "testGetNull testGetNotNull"; "testGetNull testSetNull"; pink}
+//    { rank=same; "testSetNull"; "testGetNull"; "testGetNotNull"}
+//    { rank=same; black}
+
+    "[testGetNull, testGetNotNull, testSetNull, testSetNotNull], []" -- "[testGetNull, testGetNotNull], [get]"
+    "[testGetNull, testGetNotNull, testSetNull, testSetNotNull], []" -- "[testSetNull, testSetNotNull], [set]"
+    "[testGetNull, testGetNotNull, testSetNull, testSetNotNull], []" -- "[testGetNull, testSetNull], [null]"
+    "[testGetNull, testGetNotNull, testSetNull, testSetNotNull], []" -- "[testGetNotNull, testSetNotNull], [notNull]"
+    "[testSetNull, testSetNotNull], [set]" -- "[testSetNull], [testSetNull, set, null]"
+    "[testGetNull, testSetNull], [null]" -- "[testSetNull], [testSetNull, set, null]"
+    "[testGetNull, testGetNotNull], [get]" -- "[testGetNotNull], [testGetNotNull, get, notNull]"
+    "[testGetNotNull, testSetNotNull], [notNull]" -- "[testGetNotNull], [testGetNotNull, get, notNull]"
+    "[testSetNull, testSetNotNull], [set]" -- "[testSetNotNull], [testSetNotNull, set, notNull]"
+    "[testGetNotNull, testSetNotNull], [notNull]" -- "[testSetNotNull], [testSetNotNull, set, notNull]"
+    "[testGetNull, testGetNotNull], [get]" -- "[testGetNull], [testGetNull, get, null]"
+    "[testGetNull, testSetNull], [null]" -- "[testGetNull], [testGetNull, get, null]"
+    "[testGetNull], [testGetNull, get, null]" -- "[ ]"
+    "[testSetNull], [testSetNull, set, null]" -- "[ ]"
+    "[testSetNotNull], [testSetNotNull, set, notNull]" -- "[ ]"
+    "[testGetNotNull], [testGetNotNull, get, notNull]" -- "[ ]"
+
+}
