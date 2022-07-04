@@ -4,7 +4,6 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.apache.commons.text.similarity.LongestCommonSubsequence;
-import org.jgrapht.graph.InvalidGraphWalkException;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
