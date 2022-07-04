@@ -10,8 +10,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class JavaParserUtils {
 
@@ -58,9 +60,7 @@ public class JavaParserUtils {
     // Find test methods annotated with @Test annotation
     public static List<MethodDeclaration> findAllTestMethods(CompilationUnit cu){
 
-        return cu.findAll(MethodDeclaration.class)
-                 .stream()
-                 .toList();
+        return new ArrayList<>(cu.findAll(MethodDeclaration.class));
     }
 
     public static MethodDeclaration getMethodBasedOnName(CompilationUnit cu, String name){

@@ -26,7 +26,7 @@ import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("all")
 @SupportedAnnotationTypes("Tag")
-@SupportedSourceVersion(SourceVersion.RELEASE_16)
+@SupportedSourceVersion(SourceVersion.RELEASE_12)
 public class SimpleAnnotationProcessor extends AbstractProcessor {
     private final List<Element> methods = new ArrayList<Element>();
     private final Map<String,Method> methodStorage = new HashMap<>();
