@@ -1,3 +1,5 @@
+package ca.mcgill.cs.utils;
+
 import java.util.ArrayList;
 import java.util.List;
 

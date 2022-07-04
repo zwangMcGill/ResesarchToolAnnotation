@@ -1,3 +1,8 @@
+package ca.mcgill.cs.processor;
+import ca.mcgill.cs.annotations.Tag;
+import ca.mcgill.cs.utils.Method;
+import ca.mcgill.cs.utils.*;
+
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.BodyDeclaration;
@@ -28,7 +33,7 @@ import org.junit.jupiter.api.Test;
 @AutoService(Processor.class)
 public class SimpleAnnotationProcessor extends AbstractProcessor {
     private final List<Element> methods = new ArrayList<Element>();
-    private final Map<String,Method> methodStorage = new HashMap<>();
+    private final Map<String, Method> methodStorage = new HashMap<>();
     @Override
     //TypeElement represents a class or interface element.
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
