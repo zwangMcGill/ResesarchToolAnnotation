@@ -128,14 +128,14 @@ public class SimpleAnnotationProcessor extends AbstractProcessor {
                 .map(element -> element.getAnnotation(Tag.class).method())
                 .filter(element -> !element.equals(""))
                 .distinct()
-                .toList();
+                .collect(Collectors.toList());
         return testMethods;
     }
 
     public List<String> getTestMethods(List<Element> methods) {
         List<String> testMethods = methods.stream()
                 .map(element -> element.getSimpleName().toString())
-                .toList();
+                .collect(Collectors.toList());
         return testMethods;
     }
 
@@ -144,7 +144,7 @@ public class SimpleAnnotationProcessor extends AbstractProcessor {
                 .map(element -> "test"
                         + element.getAnnotation(Tag.class).method()
                         + element.getAnnotation(Tag.class).scenario())
-                .toList();
+                .collect(Collectors.toList());
 
         List<String> oldMethodName = getTestMethods(methods);
 
