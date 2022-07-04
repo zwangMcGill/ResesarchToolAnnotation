@@ -6,11 +6,9 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.TypeDeclaration;
 import com.github.javaparser.ast.expr.AnnotationExpr;
 import com.github.javaparser.ast.expr.NormalAnnotationExpr;
+import com.google.auto.service.AutoService;
 
-import javax.annotation.processing.AbstractProcessor;
-import javax.annotation.processing.RoundEnvironment;
-import javax.annotation.processing.SupportedAnnotationTypes;
-import javax.annotation.processing.SupportedSourceVersion;
+import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.*;
 import java.io.File;
@@ -25,8 +23,9 @@ import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("all")
-@SupportedAnnotationTypes("Tag")
-@SupportedSourceVersion(SourceVersion.RELEASE_12)
+//@SupportedAnnotationTypes("Tag")
+//@SupportedSourceVersion(SourceVersion.RELEASE_12)
+@AutoService(Processor.class)
 public class SimpleAnnotationProcessor extends AbstractProcessor {
     private final List<Element> methods = new ArrayList<Element>();
     private final Map<String,Method> methodStorage = new HashMap<>();
