@@ -1,8 +1,2 @@
-SimpleAnnotationProcessor$1.class
-SimpleAnnotationProcessor.class
-IdentifyFocalMethod.class
-JavaParserUtils.class
-Method.class
-Tag.class
-Type.class
-Tokens.class
+ca\mcgill\cs\annotations\Tokens.class
+ca\mcgill\cs\processor\SimpleAnnotationProcessor.class
